@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         resume: () => {
             const link = document.createElement("a");
-            link.href = "CBSResume - Hirad Showghi.pdf";
+            link.href = "CBSResume - HiradShowghi.pdf";
             link.download = "Hirad_Resume.pdf";
             document.body.appendChild(link);
             link.click();
@@ -266,3 +266,4 @@ document.addEventListener("DOMContentLoaded", function () {
     resetTerminal();
     createCommandBar();
 });
+
