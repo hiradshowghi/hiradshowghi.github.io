@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
             let currentTime = new Date().toLocaleTimeString();
             return `<pre>
                     <span class="green">        .-"      "-.   </span> User: hiradshowghi
-                    <span class="green">      /,  .-.  .-. ,\\ </span>  OS: Windows 11
-                    <span class="green">      \\ )(_o/  \\o_)( /</span>  Hostname: CYBERXODA
+                    <span class="green">      /,  .-.  .-. ,\\ </span>  OS: Linux
+                    <span class="green">      \\ )(_o/  \\o_)( /</span>  Hostname: CYBERX
                     <span class="green">      |/     /\\     \\|</span>  Time: ${currentTime}
                     <span class="green">      (_     ^^     _)</span>  Email: <a href="mailto:hiradshowghi@gmail.com" class="custom-link">hiradshowghi@gmail.com</a>
                     <span class="green">       \\__|IIIIII|__/ </span>  GitHub: <a href="https://github.com/hiradshowghi" target="_blank" class="custom-link">https://github.com/hiradshowghi</a>
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
         github: () => {
-            window.open("https://github.com/hiradshowghi", "_blank");
+            window.open("https://github.com/hiradshowgh", "_blank");
             return `Opening <a href="https://github.com/hiradshowghi" target="_blank" class="custom-link">GitHub/hiradshowghi</a>...`;
         },
 
@@ -63,34 +63,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         projects: `
-        - 🛡️ Threat Hunting Dashboard: Developed a Python-based dashboard using Elastic Stack to collect, analyze, and visualize Windows Event Logs and Sysmon telemetry for threat detection and MITRE ATT&CK-based attack simulations.<br>
-        - ☁️ Personal Cloud Infrastructure Deployment (AWS): Built a containerized web application on AWS ECS with secure networking, CI/CD pipelines, monitoring, and automated threat detection.<br>
-        - 💱 Currency Exchange: Created a secure web application using JavaScript, HTML/CSS, Node.js, and SQLite, integrated with ExchangeRate API, supporting role-based access for users and admins.<br>
-        - ♟️ AI Chess Engine: Built a Python chess engine with Minimax and Alpha-Beta Pruning algorithms, implementing strategic gameplay, endgame knowledge, and a graphical interface using Tkinter.<br>
+        - 🛡️ Threat Hunting Dashboard: Built a detection environment using Python, Elastic Stack, and Sysmon telemetry to identify privilege escalation and lateral movement. Visualized attack patterns through MITRE ATT&CK–aligned Kibana dashboards.<br>
+        - ☁️ Personal Cloud Infrastructure Deployment (AWS): Designed and deployed a containerized web app on AWS ECS with secure VPC architecture, IAM-based access control, CI/CD pipelines, and threat monitoring using GuardDuty and CloudWatch.<br>
+        - 🧩 Network-Wide Ad Blocking Server (Ubuntu + AdGuard Home): Developed a home lab DNS filtering system that blocks ads and malicious domains across all devices, improving network privacy and security.<br>
+        - 🤖 Local Offline AI Security Assistant: Integrated a locally hosted GPT model to manage system tasks, analyze logs, and demonstrate privacy-first AI deployment without external data exposure.<br>
         `,
 
 
         certifications: `
         - COMPTIA - Security+<br>
         - COMPTIA - Network+<br>
-        - Coming Soon: Azure 900<br>
+        - Next step: Azure 900<br>
         `,
 
         skills: `
-        - 💻 Languages: Python, Java, JavaScript, C/C++, SQL, HTML/CSS, Bash<br>
-        - 🛠️ Frameworks & Libraries: Node.js, D3.js, SQLite, MongoDB, Pygame, NumPy, MITRE ATT&CK, NIST CSF, Cyber Kill Chain<br>
-        - 📊 SIEM & Security Tools: Splunk, Elastic Stack, Wireshark, Sysmon<br>
-        - 🕹️ Developer Tools: Git, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse, Docker<br>
-        - 🌐 Networking: TCP/IP, DNS, HTTP/HTTPS, VPNs, Firewalls<br>
-        - ☁️ Cloud Platforms & OS: AWS, Azure, Oracle Cloud, Linux, Windows
+        - 💻 Languages: Python, Bash, Java, JavaScript, C/C++, SQL, HTML/CSS<br>
+        - 🧠 Frameworks & Methodologies: MITRE ATT&CK, NIST CSF, Cyber Kill Chain, Incident Response Lifecycle<br>
+        - 📊 SIEM & Security Tools: Elastic Stack, Splunk, Wireshark, Sysmon, Nmap, Nessus, AdGuard Home<br>
+        - 🛠️ Developer & Automation Tools: Git, GitHub, Docker, PowerShell, VirtualBox, VMware<br>
+        - 🌐 Networking & Protocols: TCP/IP, DNS, DHCP, HTTP/HTTPS, VPNs, Firewalls, Proxy, SSH<br>
+        - ☁️ Cloud & Operating Systems: AWS, Azure, Ubuntu, Windows, macOS<br>
         `,
+
         softskills: `
         - Rapid learner with the ability to adapt to new technologies and challenges<br>
         - Strong written and verbal communication skills<br>
         - Positive attitude and collaborative mindset<br>
         - Fluent in English and Farsi<br>
         - Analytical problem-solver with attention to detail<br>
-        - Fun facts: i'm left-handed, play basketball, and love the gym
         `,
         whoami: `
         [+] Identity: 
