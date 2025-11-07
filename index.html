@@ -19,7 +19,7 @@
     </div>
 
     <!-- Access Granted Box -->
-    <div id="accessGrantedBox" class="access-granted-box">ACCESS GRANTED</div>
+    <div id="accessGrantedBox" class="access-granted-box"></div>
   </div>
 
   <div id="terminal-wrapper" style="display: none;">
@@ -47,7 +47,6 @@
       const initOverlay = document.getElementById("initLoading");
       const progressBar = document.getElementById("initProgressBar");
       const loadingText = document.getElementById("initLoadingText");
-      const accessGrantedBox = document.getElementById("accessGrantedBox");
       const terminalWrapper = document.getElementById("terminal-wrapper");
 
       const steps = [
@@ -71,15 +70,12 @@
           const delay = 300 + Math.random() * 500;
           setTimeout(updateProgress, delay);
         } else {
-          // Show "ACCESS GRANTED"
-          accessGrantedBox.style.display = "block";
-          accessGrantedBox.classList.add("flash");
 
           setTimeout(() => {
             accessGrantedBox.classList.remove("flash");
             initOverlay.style.display = "none";
             terminalWrapper.style.display = "flex";
-          }, 3000); // keep flashing for 3s before entering terminal
+          }, 500); // keep flashing for 3s before entering terminal
         }
       }
 
