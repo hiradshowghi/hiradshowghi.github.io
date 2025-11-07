@@ -213,31 +213,3 @@ body {
     border-radius: 5px;
     transition: width 0.3s ease;
 }
-
-/* Access Granted Box */
-.access-granted-box {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 80px 160px; /* much bigger box */
-    border: 3px solid #00ff99;
-    border-radius: 16px;
-    color: #00ff99;
-    font-size: 5rem; /* much larger text */
-    font-weight: bold;
-    font-family: "Share Tech Mono", monospace;
-    text-align: center;
-    z-index: 5;
-    background: rgba(0, 0, 0, 0.85);
-    box-shadow: 0 0 60px #00ff99; /* stronger glow for impact */
-}
-.access-granted-box.flash {
-    animation: flash 0.5s alternate infinite;
-}
-@keyframes flash {
-    from { opacity: 1; }
-    to { opacity: 0.8; }
-}
-
