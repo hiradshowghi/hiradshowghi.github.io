@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <br>
     <b>🌐 Online Profiles:</b><br>
     <b>linkedin or ln</b>    - Open my LinkedIn profile<br>
-    <b>github or gh</b>      - Open my GitHub profile<br>
+    <b>experience or ex</b>      - Show my experience<br>
     <br>
     <b>📄 Documents:</b><br>
     <b>resume or r</b>      - Download my resume<br>
@@ -39,17 +39,32 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span class="green">      \\ )(_o/  \\o_)( /</span>  Hostname: CYBERX
                     <span class="green">      |/     /\\     \\|</span>  Time: ${currentTime}
                     <span class="green">      (_     ^^     _)</span>  Email: <a href="mailto:hiradshowghi@gmail.com" class="custom-link">hiradshowghi@gmail.com</a>
-                    <span class="green">       \\__|IIIIII|__/ </span>  GitHub: <a href="https://github.com/hiradshowghi" target="_blank" class="custom-link">https://github.com/hiradshowghi</a>
-                    <span class="green">        | \\IIIIII/ |  </span>  LinkedIn: <a href="https://linkedin.com/in/hiradshowghis" target="_blank" class="custom-link">linkedin.com/in/hiradshowghis</a>
-                    <span class="green">        \\          /  </span>  Role: Aspiring SOC Analyst
+                    <span class="green">       \\__|IIIIII|__/ </span>  LinkedIn: <a href="https://linkedin.com/in/hiradshowghis" target="_blank" class="custom-link">linkedin.com/in/hiradshowghis</a>
+                    <span class="green">        | \\IIIIII/ |  </span>  Role: SOC Analyst
+                    <span class="green">        \\          /  </span>  
                     <span class="green">         \`--------\`   </span>  
             </pre>`;
         },
 
-        github: () => {
-            window.open("https://github.com/hiradshowgh", "_blank");
-            return `Opening <a href="https://github.com/hiradshowghi" target="_blank" class="custom-link">GitHub/hiradshowghi</a>...`;
-        },
+        education: `
+        <strong>Carleton University</strong><br>
+        B.Sc. Computer Science (2022 - expected may 2026)
+        `,
+
+        experience: `
+        <strong>SOC Analyst — Auxillium (May 2025 – Present)</strong><br>
+        • Monitor AWS logs, analyze traffic patterns, and apply detection rules to protect user data.<br>
+        • Work with SIEM ingestion, WordPress security tools, and endpoint telemetry to strengthen threat detection skills.<br>
+        • Support incident response and document risks, findings, and remediation steps.<br><br>
+
+        <strong>Security Consultant — DCS Consulting Services (Jan 2025 – Apr 2025)</strong><br>
+        • Assisted with SOC 2 Type II compliance through IT risk assessments and control validation.<br>
+        • Helped improve annual audit processes and strengthen security governance.<br><br>
+
+        <strong>Cybersecurity Everyday — Personal Blog (Aug 2025 – Present)</strong><br>
+        • Share simple, beginner-friendly cybersecurity explanations and practical defensive concepts.<br>
+        • Document hands-on labs and personal builds to reinforce learning and help others follow along.<br>
+        `,
 
         linkedin: () => {
             window.open("https://linkedin.com/in/hiradshowghis", "_blank");
@@ -63,10 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         projects: `
-        - 🛡️ Threat Hunting Dashboard: Built a detection environment using Python, Elastic Stack, and Sysmon telemetry to identify privilege escalation and lateral movement. Visualized attack patterns through MITRE ATT&CK–aligned Kibana dashboards.<br>
-        - ☁️ Personal Cloud Infrastructure Deployment (AWS): Designed and deployed a containerized web app on AWS ECS with secure VPC architecture, IAM-based access control, CI/CD pipelines, and threat monitoring using GuardDuty and CloudWatch.<br>
-        - 🧩 Network-Wide Ad Blocking Server (Ubuntu + AdGuard Home): Developed a home lab DNS filtering system that blocks ads and malicious domains across all devices, improving network privacy and security.<br>
-        - 🤖 Local Offline AI Security Assistant: Integrated a locally hosted GPT model to manage system tasks, analyze logs, and demonstrate privacy-first AI deployment without external data exposure.<br>
+        <strong>🛡️ SOC Home Lab – Detection & Monitoring</strong> | Splunk, Sysmon, Windows, Linux<br>
+        • Built a full SOC environment with Splunk + Sysmon, simulating attacks and creating MITRE-mapped detections.<br><br>
+
+        <strong>🤖 Security Automation Lab</strong> | Linux, AdGuard Home, Python<br>
+        • Created a secure sandbox with a local offline AI agent and deployed network-wide DNS filtering via AdGuard Home.<br><br>
+
+        <strong>☁️ AWS Cloud Infrastructure Deployment</strong> | AWS, Docker, VPC, IAM<br>
+        • Deployed a containerized web app on ECS with VPC isolation, IAM roles, encrypted S3, CI/CD, and cloud monitoring.<br></br>
         `,
 
 
@@ -97,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <a href="https://www.linkedin.com/in/hiradshowghis/" class="custom-link" target="_blank">
             Hirad Showghi
         </a> <br>
-        [+] Role: Aspiring Cybersecurity Professional <br>
+        [+] Role: Cybersecurity Professional <br>
         [+] Access: Granted ✅
         `,
 
@@ -116,11 +135,11 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     const aliases = {
-        gh: "github",
+        ex: "experience",
         ln: "linkedin",
         r: "resume",
         cls: "clear",
-        h: "help",
+        ed: "education",
         fetch: "neofetch"
     };
 
@@ -202,17 +221,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 👇 Put commands in the exact order you want the buttons to appear
         const customOrder = [
+            "experience",
+            "resume",
+            "education",
+            "linkedin",
             "skills",
-            "softskills",
-            "projects",
             "blog",
             "certifications",
             "neofetch",
-            "resume",
-            "help",
-            "linkedin",
+            "projects",
             "exit",
-            "github",
+            "softskills",
             "whoami"
         ];
 
