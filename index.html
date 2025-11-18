@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hirad's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Initialization Overlay -->
+  <div id="initLoading" class="init-overlay">
+    <div class="matrix-bg"></div>
+    <div class="init-content">
+      <h2>Initializing Security Protocols...</h2>
+      <div class="progress-bar-container">
+        <div id="initProgressBar" class="progress-bar"></div>
+      </div>
+      <p id="initLoadingText">Starting up...</p>
+    </div>
+
+    <!-- Access Granted Box -->
+    <div id="accessGrantedBox" class="access-granted-box"></div>
+  </div>
+
+  <div id="terminal-wrapper" style="display: none;">
+    <!-- Terminal -->
+    <div id="terminal-container">
+      <div id="output"></div>
+      <div class="input-line">
+        <div class="autocomplete-container">
+          <span class="prompt">λ</span>
+          <span id="inputMirror"></span>
+          <input type="text" id="commandInput" autocomplete="off" autofocus>
+          <span id="autocompleteHint"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Command Buttons -->
+    <div id="command-bar"></div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Initialization Loader
+    document.addEventListener("DOMContentLoaded", function () {
+      const initOverlay = document.getElementById("initLoading");
+      const progressBar = document.getElementById("initProgressBar");
+      const loadingText = document.getElementById("initLoadingText");
+      const terminalWrapper = document.getElementById("terminal-wrapper");
+
+      const steps = [
+        { progress: 10, text: "Loading security modules..." },
+        { progress: 25, text: "Initializing encryption..." },
+        { progress: 40, text: "Verifying integrity..." },
+        { progress: 60, text: "Establishing secure connection..." },
+        { progress: 80, text: "Finalizing setup..." },
+        { progress: 100, text: "Ready!" },
+      ];
+
+      let currentStep = 0;
+
+      function updateProgress() {
+        if (currentStep < steps.length) {
+          const step = steps[currentStep];
+          progressBar.style.width = `${step.progress}%`;
+          loadingText.textContent = step.text;
+          currentStep++;
+
+          const delay = 300 + Math.random() * 500;
+          setTimeout(updateProgress, delay);
+        } else {
+
+          setTimeout(() => {
+            accessGrantedBox.classList.remove("flash");
+            initOverlay.style.display = "none";
+            terminalWrapper.style.display = "flex";
+          }, 500); // keep flashing for 3s before entering terminal
+        }
+      }
+
+      setTimeout(updateProgress, 500);
+    });
+  </script>
+</body>
+</html>
